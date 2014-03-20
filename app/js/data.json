@@ -41,5 +41,35 @@
             }],
             "placeholder_text": null
         }]
-}
+},
+    {
+        "group_rendering_options": {
+            "rendering_type": "block",
+            "display_orientation": "stacked"
+        },
+        "title": null,
+        "group_validation": {  },
+        "group_help": {
+
+        },
+        "data": [{
+            "id": 1,
+            "tag": "lastName",
+            "name": "lastname_kana",
+            "type": "select",
+            "options" : [
+                {"id":"one", "value":"one"}
+            ],
+            "data_type": "STRING",
+            "input_rendering_options": {
+                "horizontal_group": true
+            },
+            "value": "Smith",
+            "label": "Last Name",
+            "validation": [{
+                "error": "regex"
+            }],
+            "placeholder_text": null
+        }]
+    }
 ]
