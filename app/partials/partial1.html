@@ -1,0 +1,34 @@
+<div class="clientsCtrl" ng-controller="MyCtrl1">
+    <form role="form" ng-submit="submit()">
+        <section layout-scroll-panel class="container">
+                <header>
+                    <h2>Basic Info</h2>
+                </header>
+
+                <div ng-repeat="group in model.form.data" validate-group group="group" ng-model="messages" ng-class="{'form-inline': group.group_rendering_options.display_orientation === 'inline'}">
+
+                    <label class="group-title"><span>{{group.title}}</span><help help-data="group.group_help" type="group.group_help.type"></help></label>
+
+                    <div ng-repeat="data in group.data"
+                         class="form-group"
+                         validator ng-model="messages" data-item="{{data.name}}"
+                         ng-class="{'double-wide': data.input_rendering_options.horizontal_group === false}">
+
+                        <stevedore-form
+                                outgoing = 'outgoing'
+                                field = 'data'
+                                messages = 'messages'
+                                matcher-results = 'results'
+                                matcher-label = 'l10n.clients.did_you_mean'></stevedore-form>
+
+                    </div>
+
+                </div>
+
+                <footer class="clearfix">
+                    <button type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-default">Clear</button>
+                </footer>
+        </section>
+    </form>
+</div>
