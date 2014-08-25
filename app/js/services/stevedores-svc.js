@@ -1,10 +1,18 @@
+/**
+ * @ngdoc service
+ * @name myApp.service:stevedores
+ * @description
+ * # A constant service that serves as a HTML partial dictionary 
+ * lookup used in the stevedore directive
+ */
+
 angular.module('myApp.services', []).factory('stevedores', [
     function () {
         'use strict';
 
         var baseDirectivePath = '/app/js/directives/stevedore/templates';
 
-        var templates = {
+        return templates = {
             "text" : baseDirectivePath + '/text-ptl.html',
             "range" : baseDirectivePath + '/range-ptl.html',
             "text_matcher" : baseDirectivePath + '/matcher-input/matcher-input-ptl.html',
@@ -18,7 +26,5 @@ angular.module('myApp.services', []).factory('stevedores', [
             "phone_number" : baseDirectivePath + '/phone-number-ptl.html',
             "radio" : baseDirectivePath + '/radio-ptl.html'
         };
-
-        return templates;
 
     }]);
