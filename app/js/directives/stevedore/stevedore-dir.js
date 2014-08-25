@@ -1,3 +1,10 @@
+/**
+ * @ngdoc directive
+ * @name app.directive:stevedoreForm
+ * @description
+ * # A directive used for building forms from data
+ */
+
 angular.module('myApp.directives', [])
 
     .directive('stevedoreForm', ['$http', '$compile', 'stevedores',
@@ -13,7 +20,7 @@ angular.module('myApp.directives', [])
             }
 
             catch(err) {
-                console.log('err =>', err);
+                console.log('error =>', err);
             }
             return template;
         }
@@ -39,8 +46,7 @@ angular.module('myApp.directives', [])
                 : scope.key = tags; // no array, just use the tag as is
 
             var GUID = function() {
-                var _id = Math.floor(Math.random() * 1000);
-                return _id;
+                return Math.floor(Math.random() * 1000);
             };
 
             // start to build the unique dynamic key name
@@ -60,16 +66,14 @@ angular.module('myApp.directives', [])
                     // append an ID to the key name for uniqueness
                     key += '_' + id;
 
-                    // we need to be able to reference this on the scope
                     scope.key = key;
 
                     // set the dynamic key/value pair on the 'outgoing' object
                     scope.outgoing[key] = scope.field.value;
                 }
                 catch (err) {
-                    console.log('\t || ERR->', err);
+                    console.log('\t error', err);
                 }
-
 
             } else  {
 
