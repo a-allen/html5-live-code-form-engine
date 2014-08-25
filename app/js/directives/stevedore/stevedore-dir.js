@@ -1,6 +1,6 @@
 /**
  * @ngdoc directive
- * @name app.directive:stevedoreForm
+ * @name myApp.directive:stevedoreForm
  * @description
  * # A directive used for building forms from data
  */
