@@ -3,7 +3,7 @@
 ## Overview
 This is the source code from a AngularJS meetup I presented at in May of 2014.
 
-The concept was to give a intermediate overview of AngularJS and demonstrate some of it's key qualities.
+The concept was to give a intermediate overview of AngularJS and demonstrate some of it's key qualities. The sample application constructs dynamic HTML forms via JSON.
 
  * two way data binding
  * directives, services and controllers
