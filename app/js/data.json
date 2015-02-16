@@ -19,7 +19,7 @@
             "horizontal_group": true
         },
         "value": "Smith",
-        "label": "Last Name",
+        "label": "Last Name I am new",
         "validation": [{
             "error": "regex"
         }],
@@ -34,7 +34,7 @@
             "input_rendering_options": {
                 "horizontal_group": true
             },
-            "value": "Austin",
+            "value": "Austin Im a new value",
             "label": "First Name",
             "validation": [{
                 "error": "regex"
@@ -56,7 +56,7 @@
             "id": 1,
             "tag": "lastName",
             "name": "lastname_kana",
-            "type": "select",
+            "type": "textarea",
             "options" : [
                 {"id":"one", "value":"one"}
             ],
