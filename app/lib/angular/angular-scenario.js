@@ -16842,7 +16842,7 @@ function $HttpProvider() {
       return data;
     }],
 
-    // transform outgoing request data
+    // transform payload request data
     transformRequest: [function(d) {
       return isObject(d) && !isFile(d) ? toJson(d) : d;
     }],

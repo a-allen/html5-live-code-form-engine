@@ -1,12 +1,17 @@
-<label><span>{{field.label}}</span><help help-data="field.help"></help></label>
-<select ng-model="outgoing[key]"
-        name="{{field.name}}"
-        type="select" ng-required="{{field.required}}"
-        ng-options="option.value for option in options"
-        validate
-        validation="field.validation"
-        ng-blur="raiseFormUpdate()">
-    <option value="">Select</option>
-</select>
+<!--<pre>{{data | json}}</pre>-->
 
-<error data-item="{{field.name}}" ng-model="messages"></error>
+<div class="form-group">
+    <label>
+        <span>{{data.label}}</span>
+    </label>
+
+    <select ng-model="data.value"
+            name="{{data.name}}"
+            type="select" ng-required="{{data.required}}"
+            ng-options="option.value for option in options"
+            validate
+            validation="data.validation"
+            ng-blur="raiseFormUpdate()">
+        <option value="">Select</option>
+    </select>
+</div>

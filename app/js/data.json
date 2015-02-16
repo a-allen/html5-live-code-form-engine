@@ -1,75 +1,88 @@
 [
-    {
+  {
     "group_rendering_options": {
-        "rendering_type": "block",
-        "display_orientation": "stacked"
+      "rendering_type": "block",
+      "display_orientation": "stacked"
     },
     "title": null,
     "group_validation": {  },
     "group_help": {
 
     },
-    "data": [{
+    "data": [
+      {
         "id": 1,
         "tag": "lastName",
-        "name": "lastname_kana",
+        "name": "lastName",
         "type": "text",
         "data_type": "STRING",
         "input_rendering_options": {
-            "horizontal_group": true
+          "horizontal_group": true
         },
         "value": "Smith",
-        "label": "Last Name I am new",
-        "validation": [{
+        "label": "Last Name",
+        "validation": [
+          {
             "error": "regex"
-        }],
+          }
+        ],
         "placeholder_text": null
+      },
+      {
+        "id": 1,
+        "tag": "firstName",
+        "name": "firstname",
+        "type": "text",
+        "data_type": "STRING",
+        "input_rendering_options": {
+          "horizontal_group": true
+        },
+        "value": "Johnson",
+        "label": "First Name",
+        "validation": [
+          {
+            "error": "regex"
+          }
+        ],
+        "placeholder_text": null
+      }
+    ]
+  },
+  {
+    "group_rendering_options": {
+      "rendering_type": "block",
+      "display_orientation": "stacked"
     },
-        {
-            "id": 1,
-            "tag": "firstName",
-            "name": "firstname_kana",
-            "type": "text",
-            "data_type": "STRING",
-            "input_rendering_options": {
-                "horizontal_group": true
-            },
-            "value": "Austin Im a new value",
-            "label": "First Name",
-            "validation": [{
-                "error": "regex"
-            }],
-            "placeholder_text": null
-        }]
-},
-    {
-        "group_rendering_options": {
-            "rendering_type": "block",
-            "display_orientation": "stacked"
-        },
-        "title": null,
-        "group_validation": {  },
-        "group_help": {
+    "title": null,
+    "group_validation": {  },
+    "group_help": {
 
+    },
+    "data": [
+      {
+        "id": 1,
+        "tag": "lastName",
+        "name": "lastname_kana",
+        "type": "textarea",
+        "options": [
+          {
+            "id": "one",
+            "value": "one"
+          }
+        ],
+        "data_type": "STRING",
+        "input_rendering_options": {
+          "horizontal_group": true
         },
-        "data": [{
-            "id": 1,
-            "tag": "lastName",
-            "name": "lastname_kana",
-            "type": "textarea",
-            "options" : [
-                {"id":"one", "value":"one"}
-            ],
-            "data_type": "STRING",
-            "input_rendering_options": {
-                "horizontal_group": true
-            },
-            "value": "Smith",
-            "label": "Last Name",
-            "validation": [{
-                "error": "regex"
-            }],
-            "placeholder_text": null
-        }]
-    }
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est quis ante luctus, a rhoncus leo placerat. Duis vel consectetur dui. Quisque ut nunc diam. Mauris rutrum mattis nulla eu pellentesque. Fusce accumsan mauris et enim hendrerit, sit amet ultrices massa elementum. Cras vehicula nibh consectetur orci dignissim, ac malesuada elit sollicitudin. Curabitur eget volutpat ipsum, et euismod nisl. Quisque placerat ullamcorper fringilla. Curabitur ornare elementum venenatis. Sed quis augue nec magna efficitur accumsan. Vivamus at nunc augue. Nunc et dui felis. Phasellus dictum volutpat viverra.",
+        "label": "Last Name",
+        "validation": [
+          {
+            "error": "regex"
+          }
+        ],
+        "placeholder_text": null
+      }
+    ]
+  }
 ]

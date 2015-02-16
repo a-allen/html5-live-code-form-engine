@@ -1,107 +1,104 @@
 angular.module('myApp.directives', [])
 
-    .directive('stevedoreForm', ['$http', '$compile', 'stevedores',
-    function ($http, $compile, stevedores) {
-        'use strict';
+  .directive('formInput', ['$http', '$compile', 'formInputLookup', function ($http, $compile, formInputLookup) {
+    'use strict';
 
-        function getTemplateUrl(field) {
+    /* getTemplateUrl
+     *
+     * @field: string, an identifier that is used to select the
+     * appropriate key in the form input lookup object
+     *
+     * this function returns a path that we can use in a GET request
+     * so we can retrieve the appropriate HTML partial and compile it to the directive
+     *
+     */
 
-            var template = null;
+    var getTemplateUrl = function (data) {
 
-            try {
-                template = stevedores[field];
-            }
+        var template = '';
 
-            catch(err) {
-                console.log('err =>', err);
-            }
-            return template;
+        try {
+          template = formInputLookup[data]; // use the formInputLookup service injected above as an object
         }
 
-        var linkFunction = function(scope, element) {
+        catch (err) {
+          console.log('there was an error loading the form =>', err);
+        }
+        return template;
+      },
 
-            scope.options = scope.field.options || null;
+      /* linkFunction
+       *
+       * @scope: object, the directives scope object
+       * @element: object, references to the DOM object used in the directive
+       *
+       */
 
-            // get template content from the input type
-            var type = scope.field.type;
-            var templateUrl = getTemplateUrl(type);
+      linkFunction = function (scope, element) {
 
-            $http.get(templateUrl).success(function(data) {
-                element.html(data);
-                $compile(element.contents())(scope);
+      /* options are only used for select boxes.
+       *
+       * if we're not dealing with a select input then
+       * set the options property to an empty object
+       *
+       */
+
+        scope.options = scope.data.options || {};
+
+        var type = scope.data.type, // the type of input we are dealing with
+
+            templateUrl = getTemplateUrl(type), // the path to the inputs HTML partial
+
+            tags = scope.data.tag; // a reference to the tag name
+
+        $http.get(templateUrl).success(function (data) {
+          element.html(data);
+          $compile(element.contents())(scope);
+        });
+
+        scope.key = tags;
+
+        // start to build the unique dynamic key name
+        if (type !== "range") {
+
+          try {
+
+            var key = "",
+                id = Math.floor(Math.random() * 1000),
+                newKey = scope.key.split(" ");
+
+            angular.forEach(newKey, function (val, index) {
+
+              key += (index === 0)
+                ? val.charAt(0).toLowerCase() + val.slice(1)
+                : val.charAt(0).toUpperCase() + val.slice(1);
+
             });
 
-            var tags = scope.field.tag;
+            // append an ID to the key name for uniqueness
+            key += '_' + id;
 
-            // build the key from the form tag ontology
-            (_.isArray(tags))
-                ? scope.key = tags.join("|") // we have an array of tags, join
-                : scope.key = tags; // no array, just use the tag as is
+            scope.key = key;
 
-            var GUID = function() {
-                var _id = Math.floor(Math.random() * 1000);
-                return _id;
-            };
+            // set the dynamic key/value pair on the 'payload' object
+            scope.payload[key] = scope.data.value;
+          }
+          catch (err) {
+            console.log('\t error', err);
+          }
 
-            // start to build the unique dynamic key name
-            if (type !== "range") {
-                try {
-                    var key = "",
-                        id = Math.floor(Math.random() * 1000),
-                        split = scope.key.split(" ");
+        }
 
-                    angular.forEach(split, function(val, index) {
-                        var n = (index === 0)
-                            ? val.charAt(0).toLowerCase() + val.slice(1)
-                            : val.charAt(0).toUpperCase() + val.slice(1);
-                        key += n;
-                    });
+      };
 
-                    // append an ID to the key name for uniqueness
-                    key += '_' + id;
-
-                    // we need to be able to reference this on the scope
-                    scope.key = key;
-
-                    // set the dynamic key/value pair on the 'outgoing' object
-                    scope.outgoing[key] = scope.field.value;
-                }
-                catch (err) {
-                    console.log('\t || ERR->', err);
-                }
-
-
-            } else  {
-
-                var key1 = scope.key + '_' + GUID(),
-                    key2 = scope.key + '_' + GUID();
-
-                // we need to be able to reference this on the scope
-                scope.key1 = key1;
-                scope.key2 = key2;
-
-                // set the dynamic key/value pair on the 'outgoing' object
-                scope.outgoing[key1] = scope.field.options[0].value;
-                scope.outgoing[key2] = scope.field.options[1].value;
-            }
-
-            // set message var for errors
-            var messages = scope.messages;
-        };
-
-        return {
-            template: '<div>{{field}}</div>',
-            restrict: 'E',
-            scope: {
-                field:'=',
-                key: '&',
-                messages: '=',
-                outgoing: '=',  // the object in which all form models are scoped to ('=' bind to parent scope)
-                options: '&'    // options used for radios and select boxes
-                                // '&' to bind an expression or method which will be executed
-                                // in the context of the scope it belongs
-            },
-            link: linkFunction
-        };
-    }
-]);
+    return {
+      template: '<div></div>',
+      restrict: 'E',
+      scope: {
+        data: '=', /* scope.data: bi-directional binding that uses data from the view */
+        payload: '=' /* scope.payload: object, 1:1 mapping to the rendered HTML form */
+      },
+      link: linkFunction
+    };
+  }
+  ]);

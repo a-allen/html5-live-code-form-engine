@@ -1,11 +1,14 @@
-<label><span>{{field.label}}</span><help help-data="field.help"></help></label>
-<input  type="text"
-        class="form-control"
-        ng-model="outgoing[key]"
-        placeholder="{{field.placeholder}}"
-        name="{{field.name}}"
-        validate
-        validation="field.validation"
-        ng-blur="raiseFormUpdate()"/>
+<div class="form-group">
+    <label>
+        <span>{{data.label}}</span>
+    </label>
 
-<error data-item="{{field.name}}" ng-model="messages"></error>
+    <input  type="text"
+            class="form-control"
+            ng-model="payload[key]"
+            placeholder="{{data.placeholder}}"
+            name="{{data.name}}"
+            validate
+            validation="data.validation"/>
+</div>
+

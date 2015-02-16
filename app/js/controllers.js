@@ -13,11 +13,22 @@ angular.module('myApp.controllers', []).
     /* Define an empty object for the form definition to live in */
     $scope.model = {};
 
+    /* view layer variable used for presentation */
+    $scope.showPayload = false;
+
     /*
      * Define an empty object for our bound form to live in.
-     * This will be a 1:1 mapping of the view form fields and their representative data.
+     * This will hold a 1:1 mapping of the view form fields and their representative data.
      */
-    $scope.outgoing = {};
+    $scope.payload = {};
+
+    $scope.showPayloadData = function() {
+      $scope.showPayload = true;
+    };
+
+    $scope.resetPayload = function() {
+      $scope.payload = {};
+    };
 
     /*
      * Ues the Angular $http service to make an AJAX call to get the data for our form.
