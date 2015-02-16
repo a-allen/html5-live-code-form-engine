@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efaacf8c-1f7e-4898-a844-83604c1cc17b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/directives/form-engine/templates/textarea-ptl.html" afterPath="$PROJECT_DIR$/app/js/directives/form-engine/templates/textarea-ptl.html" />
     </list>
     <ignored path="html5-live-code-form-engine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="89" selection-start="137" selection-end="137" vertical-scroll-proportion="0.07705479" vertical-offset="0" max-vertical-offset="584">
+            <state line="3" column="89" selection-start="137" selection-end="137" vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="465">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="textarea-ptl.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/js/directives/form-engine/templates/textarea-ptl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="6" selection-start="147" selection-end="147" vertical-scroll-proportion="0.15050167" vertical-offset="0" max-vertical-offset="598">
               <folding />
             </state>
           </provider>
@@ -67,9 +76,9 @@
         <option value="$PROJECT_DIR$/app/lib/angular/angular-scenario.js" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/partials/form.html" />
-        <option value="$PROJECT_DIR$/app/js/directives/form-engine/templates/textarea-ptl.html" />
         <option value="$PROJECT_DIR$/app/js/directives/form-engine/templates/text-ptl.html" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/js/directives/form-engine/templates/textarea-ptl.html" />
       </list>
     </option>
   </component>
@@ -151,6 +160,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html5-live-code-form-engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html5-live-code-form-engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form-engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html5-live-code-form-engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html5-live-code-form-engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form-engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -488,13 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/directives/form-engine/templates/textarea-ptl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/directives/form-engine/form-engine-dir.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="30" selection-start="2737" selection-end="2737" vertical-scroll-proportion="2.363344" vertical-offset="0" max-vertical-offset="1635">
@@ -504,7 +562,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="89" selection-start="137" selection-end="137" vertical-scroll-proportion="0.07705479" vertical-offset="0" max-vertical-offset="584">
+        <state line="3" column="89" selection-start="137" selection-end="137" vertical-scroll-proportion="-1.8" vertical-offset="0" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/directives/form-engine/templates/textarea-ptl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="147" selection-end="147" vertical-scroll-proportion="0.15050167" vertical-offset="0" max-vertical-offset="598">
           <folding />
         </state>
       </provider>
