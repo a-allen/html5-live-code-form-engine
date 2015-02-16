@@ -1,5 +1,8 @@
 # HTML5 Live Code Presentation
 
+## Installation
+This project uses Grunt JS. All you have to do is run NPM install to install dependencies and then run 'grunt server' to spin up a local environment
+
 ## Overview
 This is the source code from a AngularJS meet-up I presented at in May of 2014.
 
