@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efaacf8c-1f7e-4898-a844-83604c1cc17b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/js/directives/stevedore/stevedore-dir.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="html5-live-code-form-engine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +28,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.28253424" vertical-offset="0" max-vertical-offset="584">
+            <state line="21" column="63" selection-start="867" selection-end="867" vertical-scroll-proportion="0.5393836" vertical-offset="0" max-vertical-offset="584">
               <folding />
             </state>
           </provider>
@@ -506,7 +504,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.28253424" vertical-offset="0" max-vertical-offset="584">
+        <state line="21" column="63" selection-start="867" selection-end="867" vertical-scroll-proportion="0.5393836" vertical-offset="0" max-vertical-offset="584">
           <folding />
         </state>
       </provider>

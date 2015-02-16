@@ -11,10 +11,10 @@ The concept was to give a intermediate overview of AngularJS and demonstrate som
  * expressive HTML templates
 
 ## Notable directories & files
-***app/js/directives/form-engine***
-***app/js/controllers.js***
-***app/js/app.js***
-***app/js/data.json***
+* app/js/directives/form-engine
+* app/js/controllers.js
+* app/js/app.js
+* app/js/data.json
 
 ### Note
 The application architecture used here is not an ideal architecture for a production scale application. I have used some shortcuts and choose not to abstract certain code into an overly modular setup for ease of presentation to first time Angular developers.
