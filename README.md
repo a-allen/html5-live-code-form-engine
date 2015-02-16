@@ -11,8 +11,8 @@ The concept was to give a intermediate overview of AngularJS and demonstrate som
  * expressive HTML templates
 
 ## Notable directories & files
-***app/js/directives/stevedore***
-***app/js/services***
+***app/js/directives/stevedore***  
+***app/js/services***  
 ***app/js/controllers.js***
 
 ### Note

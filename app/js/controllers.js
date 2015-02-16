@@ -1,3 +1,10 @@
+/**
+ * @ngdoc controller
+ * @name myApp.controller:MyCtrl1
+ * @description
+ * # The controller used for getting data for a dynamic form.
+ */
+
 'use strict';
 
 angular.module('myApp.controllers', []).
